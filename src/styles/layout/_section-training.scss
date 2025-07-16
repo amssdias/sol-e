@@ -16,8 +16,16 @@
         height: 60rem;
         object-fit: cover;
 
+        padding-right: 2rem;
+
         @include respond(tab-port) {
             width: 80%;
+            padding-right: 0rem;
         }
+
     }
+
+    // & .container h2 {
+    //     margin-left: 2rem;
+    // }
 }

@@ -15,11 +15,12 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
 
-        padding: 1.5rem;
+        padding: 1.5rem 0rem;
     }
 
     @include respond(tab-port) {
         grid-template-rows: auto;
+        padding: 3rem 0rem;
     }
 
     &__content {
