@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
 
 .timeline {
     padding: 2rem 0rem;
@@ -12,6 +13,10 @@
         width: 2px;
         height: 85%;
         background-color: black;
+
+        @include respond(phone) {
+            left: 0%;
+        }
     }
 
     &__item {
@@ -20,22 +25,28 @@
         left: 0%;
         width: 50%;
 
+        @include respond(phone) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+
         &--right {
             left: 50%;
+
+            @include respond(phone) {
+                left: 0%;
+            }
 
             & .timeline__step {
                 left: -20px;
                 right: auto;
+
+                @include respond(phone) {
+                    left: -13px;
+                }
             }
         }
-
-        // &:first-child .timeline__step::before {
-        //     display: none;
-        // }
-
-        // &:last-child .timeline__step::after {
-        //     display: none;
-        // }
 
         &:nth-child(even) .timeline__step::after {
             position: absolute;
@@ -57,6 +68,11 @@
             width: 70%;
             height: 2px;
 
+            @include respond(phone) {
+                left: 100%;
+                right: 0;
+            }
+
         }
 
     }
@@ -73,26 +89,10 @@
         top: 50%;
         transform: translateY(-50%);
 
-        // &::after {
-        //     position: absolute;
-        //     content: "";
-        //     top: 100%;
-        //     left: 50%;
-        //     background-color: black;
-        //     width: 2px;
-        //     height: 100%;
-        // }
-
-        // &::before {
-        //     position: absolute;
-        //     content: "";
-        //     bottom: 100%;
-        //     left: 50%;
-        //     width: 2px;
-        //     height: 100%;
-        //     background-color: black;
-
-        // }
+        @include respond(phone) {
+            left: -13px;
+            right: auto;
+        }
 
     }
 
