@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as *;
+
+.timeline {
+    padding: 2rem 0rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 2px;
+        height: 85%;
+        background-color: black;
+    }
+
+    &__item {
+        background-color: rgba(0, 0 , 0, 0.1);
+        position: relative;
+        left: 0%;
+        width: 50%;
+
+        &--right {
+            left: 50%;
+
+            & .timeline__step {
+                left: -20px;
+                right: auto;
+            }
+        }
+
+        // &:first-child .timeline__step::before {
+        //     display: none;
+        // }
+
+        // &:last-child .timeline__step::after {
+        //     display: none;
+        // }
+
+        &:nth-child(even) .timeline__step::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 100%;
+            background-color: black;
+            width: 70%;
+            height: 2px;
+
+        }
+
+        &:nth-child(odd) .timeline__step::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: 100%;
+            background-color: black;
+            width: 70%;
+            height: 2px;
+
+        }
+
+    }
+
+    &__step {
+
+        position: absolute;
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        background-color: white;
+
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        // &::after {
+        //     position: absolute;
+        //     content: "";
+        //     top: 100%;
+        //     left: 50%;
+        //     background-color: black;
+        //     width: 2px;
+        //     height: 100%;
+        // }
+
+        // &::before {
+        //     position: absolute;
+        //     content: "";
+        //     bottom: 100%;
+        //     left: 50%;
+        //     width: 2px;
+        //     height: 100%;
+        //     background-color: black;
+
+        // }
+
+    }
+
+    &__content {
+        padding: 3rem 10rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+}

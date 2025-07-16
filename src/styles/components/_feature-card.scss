@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+
+
+.features {
+    // position: relative;
+}
+
+.feature-card {
+
+    padding: 2rem 2rem;
+    padding-top: 4rem;
+    border: 1px solid $color-accent;
+    border-top: 0.3rem solid $color-accent;
+    border-radius: $border-radius-modals;
+    position: relative;
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+
+        position: absolute;
+        top: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: white;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        border: 1px solid $color-accent;
+        border-radius: 50%;
+        background-color: $color-accent;
+
+        transition: transform 0.3s ease;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $color-text;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: $color-text;
+    }
+}

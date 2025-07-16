@@ -1,0 +1,33 @@
+@use '../abstracts/mixins' as *;
+
+.header {
+	background-image:
+		linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+		url('@/assets/images/header-bg.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 95vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0rem 10rem;
+
+	@include respond(phone) {
+        padding: 0rem 4rem;
+		height: 98vh;
+    }
+
+	&-actions {
+		margin-top: 5rem;
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
+	}
+}

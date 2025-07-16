@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+@use '../abstracts/mixins' as *;
+
+
+.section-training {
+    background-color: $main-bg;
+    display: flex;
+
+    @include respond(tab-port) {
+		flex-direction: column-reverse;
+        align-items: center;
+	}
+    
+    &__image-img {
+        width: 40%;
+        height: 60rem;
+        object-fit: cover;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+    }
+}

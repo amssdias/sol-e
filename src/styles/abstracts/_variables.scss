@@ -1,0 +1,31 @@
+// COLORS
+$color-white: #fff;
+$color-black: #000;
+
+// Semantic Color Roles
+$color-secondary:    #FF90A5;
+$color-accent:       #8A73E4;
+$color-primary-dark: #4F3C82;
+$color-text:         #E6E6E6;
+
+// Background colors
+$main-bg: #121326;
+// $bg-about: #14083A;
+$bg-journey:  #FFB071;
+$bg-solar-economy: #FF85B8;
+
+$border-radius-modals: 0.3rem;
+
+
+// 🎨 Semantic Color Roles
+$color-primary:      #725CAD;
+$color-accent-light: #EEEAFB;
+
+
+$color-bg:           #0A0A0F;
+$color-surface:      #1A1C38;
+$color-text-muted:   #b0b0b0;
+
+// 🧱 Utility Shades (optional)
+$color-primary-dark: darken($color-primary, 15%);
+$color-accent-light: lighten($color-accent, 10%);

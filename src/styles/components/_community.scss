@@ -1,0 +1,47 @@
+@use '../abstracts/mixins' as *;
+
+
+.community {
+
+    display: flex;
+    padding: 4rem 2rem;
+
+    @include respond(phone) {
+        flex-direction: column-reverse;
+        padding: 2rem 0rem;
+    }
+
+    &__content {
+        padding: 0rem 4rem;
+
+        @include respond(phone) {
+            padding: 0rem;
+        }
+    }
+
+    &__social-network {
+
+        &-item {
+
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 6fr;
+            align-items: center;
+
+            &__icon {
+                width: 4rem;
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+
+            & h3 {
+                font-size: 2rem;
+            }
+
+            & p {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+        }
+    }
+}

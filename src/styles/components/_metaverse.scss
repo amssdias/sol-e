@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+
+.metaverse {
+
+    &__content {
+        display: flex;
+        height: 10rem;
+        width: 100%;
+        
+        padding: 0.5rem 1rem;
+        
+        & h3 {
+            border-bottom: 1px solid white;
+            align-self: flex-end;
+            width: 40%;
+            text-align: center;
+        }
+
+        &__img {
+            color: $color-white;
+            font-size: 3rem;
+            width: 60%;
+            background-color: $color-primary-dark;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:first-child .metaverse__content__img {
+            clip-path: polygon(50% 0%, 40% 100%, 60% 100%);
+        }
+
+        &:nth-child(2) .metaverse__content__img {
+            clip-path: polygon(39% 0, 61% 0, 70% 100%, 30% 100%);
+        }
+
+        &:nth-child(3) .metaverse__content__img {
+            clip-path: polygon(29% 0, 71% 0, 80% 100%, 20% 100%);
+        }
+
+        &:nth-child(4) .metaverse__content__img {
+            clip-path: polygon(19% 0, 81% 0, 90% 100%, 10% 100%);
+        }
+
+        &:nth-child(5) .metaverse__content__img {
+            clip-path: polygon(9% 0, 91% 0, 100% 100%, 0% 100%);
+        }
+    }
+}
